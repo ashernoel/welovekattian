@@ -99,15 +99,16 @@ state = {
                 return (
                   <div className='intro'>
                     <Container>
-                        <Box m={3}>
+                        <Box m={1}>
                             <Typography variant="h4" align="center">
                                 Happy Birthday, Kat!!
                             </Typography>
-                            <Paper style={{ padding: 14, width: "90%", maxWidth: 600, margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "100%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
-                              In celebration of your special day, {QuizData.length} people worked together to make this happen:
-                                <br /><br />
-                              All of them wrote you heartfelt birthday messages. To continue, correctly guess the author of each.
+                              In celebration of your special day, {QuizData.length} close friends wrote you heartfelt birthday messages! 
+                              
+                              <br /><br />
+                              To continue, correctly guess their respective author.
                               <br /><br />
                               When you're ready, enjoy! PS: The site tracks the number of inccorect guesses ;)
 
@@ -125,11 +126,11 @@ state = {
             if(quizEnd) {
                 return (
                     <Container>
-                        <Box m={3}>
+                        <Box m={1}>
                             <Typography variant="h4" align="center">
                                 The End!
                             </Typography>
-                            <Paper style={{ padding: 14, width: "90%", maxWidth: 600, margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "100%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
                                Incorrect Guesses: {this.state.score}
                                <br /><br />
@@ -153,11 +154,11 @@ state = {
 
         return (
             <Container>
-                        <Box m={3}>
+                        <Box m={1}>
                             <Typography variant="h4" align="center">
                               {`Message ${currentQuestion + 1}`}
                             </Typography>
-                            <Paper style={{ padding: 14, width: "90%", maxWidth: 600, margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "100%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
                                {questions}
                                <br /><br />
