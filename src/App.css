@@ -54,8 +54,8 @@
 .qtext{
   margin-top: 20px;
   margin-bottom: -20px;
-  font: 12px/1.5 "Ruda";
-
+  font: 18px/1.5 "Ruda";
+  font-weight: bold;
 }
 
 .correct {
