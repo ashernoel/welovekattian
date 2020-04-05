@@ -70,7 +70,6 @@ state = {
                 score: this.state.score + 1
             })
         }
-
     }
 
     finishHandler = () => {
@@ -94,24 +93,27 @@ state = {
     }
 
     render() {
-        const {questions, options, currentQuestion, userAnswer, quizEnd, start} = this.state;            
+        const {questions, options, currentQuestion, userAnswer, quizEnd, start} = this.state;
             if (start) {
                 return (
                   <div className='intro'>
                     <Container>
                         <Box m={1}>
                             <Typography variant="h4" align="center">
+                            <div class="htext">
                                 Happy Birthday, Kat!!
+                            </div>
                             </Typography>
                             <Paper style={{ padding: 14, width: "100%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
-                              In celebration of your special day, {QuizData.length} close friends wrote you heartfelt birthday messages! 
-                              
+                              <div class="btext">
+                              In celebration of your special day, {QuizData.length} close friends wrote you heartfelt birthday messages!
+
                               <br /><br />
                               To continue, correctly guess their respective author.
                               <br /><br />
-                              When you're ready, enjoy! PS: The site tracks the number of inccorect guesses ;)
-
+                              When you're ready, enjoy! PS: The site tracks the number of incorrect guesses ;)
+                              </div>
                               </Typography>
                             </Paper>
                             <Button variant="contained" color="primary" onClick={this.startHandler}>
@@ -128,10 +130,13 @@ state = {
                     <Container>
                         <Box m={1}>
                             <Typography variant="h4" align="center">
+                            <div class="htext">
                                 The End!
+                            </div>
                             </Typography>
                             <Paper style={{ padding: 14, width: "100%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
+                              <div class="btext">
                                Incorrect Guesses: {this.state.score}
                                <br /><br />
                               Contributors (in order of submission): Raymond Feng, Max Guo, Ivan Specht, Damon Halback, Matthew Hajjar, Nikhil Dharmaraj, Kelsey Wu, Shania Wang, Raj Movva, Sian Smith, Kevin Mao, Jocelin Su, Sheldon Tan, Ruhi Sayana, Joanna Lin, Derek Zheng, Anna Wang, Karen Ge, Moses Mayer, Ashley Lin, Cindy Wang, David Liu, Christie Chen, Jeffrey Kwan, Emiko Armstrong, Dylan Zhou, Asher Noel, Melinda Sun, Rachel Li, Ginnie Ma, Jacqueline Wei, Kelly Shen, Jeffrey Gu, Kat Zhang, David Ma, Justin Xie, Arul Kapoor, Lizzy Ling, Benji Kan, Ellen Dong, Melissa Kwan, Jimmy Lin, Haneul Shin, Jun Kim, Kathryn Zhou, Sidra Xu, Hahn Lheem, Claire Zhou.
@@ -141,6 +146,7 @@ state = {
                               Github: <Link href ="https://github.com/ashernoel/welovekattian"> ashernoel/welovekattian </Link>
                               <br /><br />
                               We are lucky to have you in our lives! HAPPY BIRTHDAY!!
+                              </div>
                               </Typography>
                             </Paper>
                             <Button variant="contained" color="primary" onClick={this.startOverHandler}>
@@ -158,9 +164,11 @@ state = {
             <Container>
                         <Box m={1}>
                             <Typography variant="h4" align="center">
+                              <div class="htext">
                               {`Message ${currentQuestion + 1}`}
+                              </div>
                             </Typography>
-                            <Paper style={{ padding: 14, width: "100%", maxWidth: 600, margin: "12px auto" }}>
+                            <Paper elevation={5} style={{ padding: 14, width: "100%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
                                {questions}
                                <br /><br />
@@ -168,11 +176,15 @@ state = {
                                 <p key = {option.id}
                                 onClick={() => this.checkAnswer(option)}
                                     className = {`ui floating message options
-                                    ${userAnswer === option ? "selected" : null }`}
-                                    
+                                    ${userAnswer === option ?
+                                      ((userAnswer === this.state.answer) ? "correct" : "incorrect") : null}`}
+
+
 
                                 >
+                                <div class="btext">
                                 {option}
+                                </div>
                                 </p>
                                 ))}
                               </Typography>

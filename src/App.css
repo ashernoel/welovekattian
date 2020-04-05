@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
 
 .App {
-  font: 20px/1.5  "Sen";
   text-align: center;
   margin-top: 50px;
   margin-left: 50px;
@@ -43,8 +42,20 @@
   }
 }
 
-.selected {
+.htext{
+  font: 30px/1.5 "Sen";
+}
+
+.btext{
+  font: 18px/1.5  "Sen";
+}
+
+.correct {
   background: linear-gradient(to right, #74ebd5, #acb6e5) !important;
+}
+
+.incorrect{
+  background: linear-gradient(to right, #ff8670, #ffee70) !important;
 }
 
 
