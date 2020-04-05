@@ -1,6 +1,14 @@
 import React from 'react';
 import {QuizData} from './QuizData';
 
+
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
+import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
+
 class Quiz extends React.Component {
 state = {
     userAnswer: null,
@@ -12,7 +20,6 @@ state = {
     start: true,
     answer: null
 }
-
     loadQuiz = () => {
         const {currentQuestion} = this.state;
         this.setState(() => {
@@ -98,25 +105,26 @@ state = {
             
             if (start) {
                 return (
-                    <div> 
-                        <h2>
-                            Happy Birthday Kat!! 
-                        </h2>
-
-                        <h3>
-                            In celebration of your special day, a group of 45+ people worked together to make this present happen:  </h3>
-                            <h3>
-                            All of them wrote you a heartfelt birthday message. To continue to the next message, you must correctly guess the author from a list of options. 
-                            </h3>
-                            <h3>
-                            When you're ready, the world is yours. 
-                            </h3>
-                        <button 
-                    className = "ui inverted button"
-                    onClick={this.startHandler}
-                    >
-                      Begin</button>
-                    </div>
+                    <Container>
+                        <Box m={3}>
+                            <Typography variant="h4" align="center">
+                                Happy Birthday, Kat!!
+                            </Typography>
+                            <Paper style={{ padding: 14, width: 640, margin: "12px auto" }}>
+                              <Typography variant="body1" gutterBottom>
+                              In celebration of your special day, a group of 45+ people worked together to make this present happen:
+                              
+                              All of them wrote you a heartfelt birthday message. To continue to the next message, you must correctly guess the author from a list of options. 
+                              
+                              When you're ready, the world is yours. 
+                            
+                              </Typography>
+                            </Paper>
+                            <Button variant="contained" color="primary" onClick={this.startHandler}>
+                                Begin
+                            </Button>
+                        </Box>
+                    </Container>
                 )
             }
         
