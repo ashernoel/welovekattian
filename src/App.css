@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
 .App {
+  font: 20px/1.5  "Sen";
   text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .App-logo {
@@ -44,8 +50,18 @@
 
 .options {
   padding: 8px;
+<<<<<<< HEAD
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+
+h2 {
+  font: 28px/1.5  "Sans Serif";
+=======
   border: 0.1px solid #000;
-  cursor: pointer; 
+  cursor: pointer;
+>>>>>>> 85ceb0bf68cdf131dc0f195811389aa595795a37
 }
 
 ul {
@@ -53,6 +69,6 @@ ul {
 }
 
 body {
-  font-size: 18px;
+  margin-top: 50px;
   background: #c7d5ff;
 }

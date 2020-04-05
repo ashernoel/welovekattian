@@ -1,7 +1,6 @@
 import React from 'react';
 import {QuizData} from './QuizData';
 
-
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import Container from "@material-ui/core/Container";
@@ -39,11 +38,11 @@ state = {
       this.setState({
          currentQuestion: this.state.currentQuestion + 1
       })
-     
+
     }
 
     componentDidUpdate(prevProps, prevState) {
-      const {currentQuestion} = this.state; 
+      const {currentQuestion} = this.state;
       if(this.state.currentQuestion !== prevState.currentQuestion) {
         this.setState(() => {
             return {
@@ -58,16 +57,16 @@ state = {
 
     checkAnswer = guess => {
         this.setState({
-            userAnswer: guess, 
+            userAnswer: guess,
         })
 
         if (guess === this.state.answer) {
             this.setState({
-                disabled: false 
+                disabled: false
             })
         } else {
             this.setState({
-                disabled: true, 
+                disabled: true,
                 score: this.state.score + 1
             })
         }
@@ -98,6 +97,7 @@ state = {
         const {questions, options, currentQuestion, userAnswer, quizEnd, start} = this.state;            
             if (start) {
                 return (
+                  <div className='intro'>
                     <Container>
                         <Box m={3}>
                             <Typography variant="h4" align="center">
@@ -105,11 +105,12 @@ state = {
                             </Typography>
                             <Paper style={{ padding: 14, width: "90%", maxWidth: 640, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
-                              In celebration of your special day, ${QuizData.length} people worked together to make this present happen:
-                              <br /><br />
-                              All of them wrote you heartfelt birthday messages. To continue, you must correctly guess the author. 
-                              <br /><br />
-                              When you're ready, enjoy! PS: The site tracks incorrect guesses ;) 
+                              In celebration of your special day, a group of 45+ people worked together to make this present happen:
+
+                              All of them wrote you a heartfelt birthday message. To continue to the next message, you must correctly guess the author from a list of options.
+
+                              When you're ready, the world is yours.
+
                               </Typography>
                             </Paper>
                             <Button variant="contained" color="primary" onClick={this.startHandler}>
@@ -117,9 +118,10 @@ state = {
                             </Button>
                         </Box>
                     </Container>
+                  </div>
                 )
             }
-        
+
             if(quizEnd) {
                 return (
                     <Container>
@@ -129,7 +131,7 @@ state = {
                             </Typography>
                             <Paper style={{ padding: 14, width: "90%", maxWidth: 640, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
-                               Incorrect Guesses: {this.state.score} 
+                               Incorrect Guesses: {this.state.score}
                                <br /><br />
                               Contributors (in order of submission): Raymond Feng, Max Guo, Ivan Specht, Damon Halback, Matthew Hajjar, Nikhil Dharmaraj, Kelsey Wu, Shania Wang, Raj Movva, Sian Smith, Kevin Mao, Jocelin Su, Sheldon Tan, Ruhi Sayana, Joanna Lin, Derek Zheng, Anna Wang, Karen Ge, Moses Mayer, Ashley Lin, Cindy Wang, David Liu, Christie Chen, Jeffrey Kwan, Emiko Armstrong, Dylan Zhou, Asher Noel, Melinda Sun, Rachel Li, Ginnie Ma, Jacqueline Wei, Kelly Shen, Jeffrey Gu, Kat Zhang, David Ma, Justin Xie, Arul Kapoor, Lizzy Ling, Benji Kan, Ellen Dong, Melissa Kwan, Jimmy Lin, Haneul Shin, Jun Kim, Kathryn Zhou.
                               <br /><br />
@@ -143,12 +145,12 @@ state = {
                             </Button>
                         </Box>
                     </Container>
-                   
+
                 )
             }
-        
-        
-        
+
+
+
         return (
             <Container>
                         <Box m={3}>
@@ -160,18 +162,19 @@ state = {
                                {questions}
                                <br /><br />
                                {options.map(option => (
-                                <p key = {option.id} 
+                                <p key = {option.id}
                                 onClick={() => this.checkAnswer(option)}
                                     className = {`ui floating message options
                                     ${userAnswer === option ? "selected" : null }`}
                                     
+
                                 >
                                 {option}
                                 </p>
                                 ))}
                               </Typography>
                             </Paper>
-                            {currentQuestion < QuizData.length - 1 && 
+                            {currentQuestion < QuizData.length - 1 &&
                             <Button variant="contained" color="primary"
                             disabled = {this.state.disabled}
                             onClick={this.nextQuestionHandler}
@@ -179,7 +182,7 @@ state = {
                                 Next
                             </Button>}
 
-                            {currentQuestion === QuizData.length - 1 && 
+                            {currentQuestion === QuizData.length - 1 &&
                             <Button variant="contained" color="primary"
                                 disabled = {this.state.disabled}
                                 onClick={this.finishHandler}
