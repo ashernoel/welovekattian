@@ -95,9 +95,7 @@ state = {
     }
 
     render() {
-        const {questions, options, currentQuestion, userAnswer, quizEnd, start} = this.state;
-        console.log("HELLO")
-            
+        const {questions, options, currentQuestion, userAnswer, quizEnd, start, answer} = this.state;            
             if (start) {
                 return (
                     <Container>
@@ -165,7 +163,9 @@ state = {
                                 <p key = {option.id} 
                                 onClick={() => this.checkAnswer(option)}
                                     className = {`ui floating message options
-                                    ${userAnswer === option ? "selected" : null }`}
+                                    ${userAnswer === option ? "selected" : null } 
+                                    ${answer === option ? "correct" : null }`}
+                                    
                                 >
                                 {option}
                                 </p>
