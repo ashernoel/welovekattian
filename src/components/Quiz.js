@@ -9,7 +9,8 @@ state = {
     quizEnd: false,
     score: 0,
     disabled: true,
-    start: true
+    start: true,
+    answer: null
 }
 
     loadQuiz = () => {
@@ -18,7 +19,7 @@ state = {
             return {
                 questions: QuizData[currentQuestion].question,
                 options: QuizData[currentQuestion].options,
-                answers: QuizData[currentQuestion].answer
+                answer: QuizData[currentQuestion].answer
             };
         });
     };
@@ -28,14 +29,14 @@ state = {
     }
 
     nextQuestionHandler = () => {
-      const {userAnswer, answer, score} = this.state;
+      const {userAnswer, answer} = this.state;
       this.setState({
          currentQuestion: this.state.currentQuestion + 1
       })
 
       if (userAnswer === answer) {
         this.setState({
-            score: score + 1
+            score: this.state.score + 1
         })
       }
     }
@@ -48,24 +49,27 @@ state = {
                 disabled: true,
                 questions: QuizData[currentQuestion].question,
                 options: QuizData[currentQuestion].options,
-                answers: QuizData[currentQuestion].answer
+                answer: QuizData[currentQuestion].answer
             };
         })
       }
     }
 
     checkAnswer = guess => {
-        const {userAnswer, answer} = this.state;
         this.setState({
-            userAnswer: guess,
-            disabled: false 
+            userAnswer: guess, 
         })
 
-        if (userAnswer === answer) {
+        if (guess === this.state.answer) {
             this.setState({
                 disabled: false 
             })
+        } else {
+            this.setState({
+                disabled: true 
+            })
         }
+
     }
 
     finishHandler = () => {
@@ -96,7 +100,7 @@ state = {
                 return (
                     <div> 
                         <h2>
-                            Happy Birthday Kat!!!! 
+                            Happy Birthday Kat!! 
                         </h2>
 
                         <h3>
@@ -107,8 +111,6 @@ state = {
                             <h3>
                             When you're ready, the world is yours. 
                             </h3>
-                       
-
                         <button 
                     className = "ui inverted button"
                     onClick={this.startHandler}
