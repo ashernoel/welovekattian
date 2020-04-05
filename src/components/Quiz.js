@@ -95,7 +95,7 @@ state = {
     }
 
     render() {
-        const {questions, options, currentQuestion, userAnswer, quizEnd, start, answer} = this.state;            
+        const {questions, options, currentQuestion, userAnswer, quizEnd, start} = this.state;            
             if (start) {
                 return (
                     <Container>
@@ -103,7 +103,7 @@ state = {
                             <Typography variant="h4" align="center">
                                 Happy Birthday, Kat!!
                             </Typography>
-                            <Paper style={{ padding: 14, width: 640, margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "90%", maxWidth: 640, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
                               In celebration of your special day, ${QuizData.length} people worked together to make this present happen:
                               <br /><br />
@@ -127,7 +127,7 @@ state = {
                             <Typography variant="h4" align="center">
                                 The End!
                             </Typography>
-                            <Paper style={{ padding: 14, width: "80%", margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "90%", maxWidth: 640, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
                                Incorrect Guesses: {this.state.score} 
                                <br /><br />
@@ -155,7 +155,7 @@ state = {
                             <Typography variant="h4" align="center">
                               {`Message ${currentQuestion + 1}`}
                             </Typography>
-                            <Paper style={{ padding: 14, width: "80%", margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "90%", maxWidth: 640, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
                                {questions}
                                <br /><br />
@@ -163,8 +163,7 @@ state = {
                                 <p key = {option.id} 
                                 onClick={() => this.checkAnswer(option)}
                                     className = {`ui floating message options
-                                    ${userAnswer === option ? "selected" : null } 
-                                    ${answer === option ? "correct" : null }`}
+                                    ${userAnswer === option ? "selected" : null }`}
                                     
                                 >
                                 {option}
