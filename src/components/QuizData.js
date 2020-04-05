@@ -286,13 +286,13 @@ export const QuizData = [
         question: "Happy Birthday!",
         options: ["Eric Zhang","Austin Li","Claire Zhou","Kathryn Zhou"],
         answer: 'Eric Zhang'
-    },,
+    },
     {
         id: 48,
         question: "wow what a snak-- (#janestreet) i mean math god !! im very grateful to have met you this year! from crackhead hours at 2-3am in cabot to midterm cram sessons. even though i make fun of you for being a sell out, youre one of the most academically driven and big-brain people i know :PPP.  dont leave the 25 squad behind! hope you have the best birthday every kat, you deserve it :)",
         options: ["Eric Zhang","Austin Li","Claire Zhou","Kathryn Zhou"],
         answer: 'Austin Li'
-    }
+    },
     {
         id: 49,
         question: "Hi Kat HAPPIEST OF ALL BIRTHDAYS:’) I’m so grateful for our friendship & the memories we’ve made together. Currently missing our Cabot work sessions/walking together back to our dorms in the freezing wee hours of the night/talks about literally the most random things! Also you inspire me. Everyday. I so wish I could be with you to celebrate and I hope you have the most wonderful day!!! Sending love from the South❤️",
