@@ -277,14 +277,26 @@ export const QuizData = [
     },
     {
         id: 46,
-        question: "Hahn is life",
-        options: ["Jacqueline Wei","Hahn Lheem","Claire Zhou","Kathryn Zhou"],
+        question: "We now prove the following proposition.//  Prop 1: kattian is a tree. // Proof: We will prove this isomorphism by showing inclusion in both directions. Note that we are working in the category of living objects: by Descartes, since kat is able to think, therefore she is, so she must be living. First, assume that an object in this category is a tree. We will prove that this object must be kattian by showing that it satisfies all of the KAT AXIOMS. // 1. First, kat’s favorite color is blue. Trees reach towards the sky, which is blue, so their favorite color must also be blue. Furthermore, we can prove that yellow is important to both kat and trees by the following exact sequence: harker c/o 2019 color is yellow -> harker is “K tO LiFe” -> sun gives life to trees -> sun is yellow // 2. kat never responds to my texts. Last time I talked with a tree, it never responded to me, so the response times for both are identically infinite. // 3. kat throws a lot of shade, especially at people like benji. Trees naturally (or should I say, canonically) provide SO much shade, so this axiom is trivially satisfied. // 4. kat has MASSIVE brain and even more MASSIVE muscles #coronapushupchallenge; likewise, trees, especially the ones found in the good old country of California, are Extremely Massive, just like kattian. // Proving the reverse direction – that is, if an object is kat, then it must be a tree – is trivial: since kat is a Stanford wannabe, she must be a tree. Furthermore, she is dating a tree, and since trees can only pollinate each other, kat is either dumb or a tree. As kat has a very massive singular brain cell, she cannot possibly be dumb, so she is a tree. This completes our proof. $\blacksquare$ // In all seriousness, as cheesy as it may sound, you’ve been a tree to me this freshman year. Even during my lows – and trust me, I’ve hit a lot of lows this year – you were always there for me. I think my fondest memories during freshman year were all those late nights with you and Asher, and I can’t begin to say how much those moments have meant to me. Even though, yea, you’re bad at responding to my texts, or yea, you’re always super busy and you don’t have that much free time to spare, your presence alone is more than I could ask for. You’re an incredibly strong, incredibly resilient woman, and you inspire a lot of people around you, especially me. And in that regard, you’ve really helped me find my home at Harvard, a process I’m sure you’re already familiar with via my blog post (lol). In the words of one of my favorite authors, Hermann Hesse: (sorry expos, I know I shouldn’t quote large chunks of text, but this is just really good writing) 'When we are stricken and cannot bear our lives any longer, then a tree has something to say to us: Be still! Be still! Look at me! Life is not easy, life is not difficult. Those are childish thoughts. Let God speak within you, and your thoughts will grow silent. You are anxious because your path leads away from mother and home. But every step and every day lead you back again to the mother. Home is neither here nor there. Home is within you, or home is nowhere at all.'' // So, as you yourself grow a year older and become a little bit bolder, as you add another ring to your trunk, you’re becoming stronger (big bodyyyy) and taller and greater than ever before. There’s a lot ahead of you, and although we may not share any classes next year or have similar long-term interests, I hope I can be there for you every step of the way, just like you’ve been there for me. It is such an honor to have a POPULAR SUPERSTAR like you as one of my closest friends, and I really hope we can keep it that way. Hope your birthday goes well, treat yourself once in a while, get more sleep, and stay the amazing person – the great Sequoia tree – that you are. :)",
+        options: ["Eric Zhang","Hahn Lheem","Claire Zhou","Austin Li"],
         answer: 'Hahn Lheem'
     },
     {
         id: 47,
+        question: "Happy Birthday!",
+        options: ["Eric Zhang","Austin Li","Claire Zhou","Kathryn Zhou"],
+        answer: 'Eric Zhang'
+    },,
+    {
+        id: 48,
+        question: "wow what a snak-- (#janestreet) i mean math god !! im very grateful to have met you this year! from crackhead hours at 2-3am in cabot to midterm cram sessons. even though i make fun of you for being a sell out, youre one of the most academically driven and big-brain people i know :PPP.  dont leave the 25 squad behind! hope you have the best birthday every kat, you deserve it :)",
+        options: ["Eric Zhang","Austin Li","Claire Zhou","Kathryn Zhou"],
+        answer: 'Austin Li'
+    }
+    {
+        id: 49,
         question: "Hi Kat HAPPIEST OF ALL BIRTHDAYS:’) I’m so grateful for our friendship & the memories we’ve made together. Currently missing our Cabot work sessions/walking together back to our dorms in the freezing wee hours of the night/talks about literally the most random things! Also you inspire me. Everyday. I so wish I could be with you to celebrate and I hope you have the most wonderful day!!! Sending love from the South❤️",
-        options: ["Jacqueline Wei","Hahn Lheem","Claire Zhou","Kathryn Zhou"],
+        options: ["Jacqueline Wei","Austin Li","Claire Zhou","Kathryn Zhou"],
         answer: 'Claire Zhou'
     }
 ];
