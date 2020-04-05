@@ -50,18 +50,13 @@
 
 .options {
   padding: 8px;
-<<<<<<< HEAD
-  border: 2px solid #000;
+  border: 0.1px solid #000;
   cursor: pointer;
 }
 
 
 h2 {
   font: 28px/1.5  "Sans Serif";
-=======
-  border: 0.1px solid #000;
-  cursor: pointer;
->>>>>>> 85ceb0bf68cdf131dc0f195811389aa595795a37
 }
 
 ul {

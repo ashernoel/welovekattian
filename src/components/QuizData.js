@@ -268,5 +268,23 @@ export const QuizData = [
         question: "kat tian. i literally love you so much you're my favorite human ever and every time I see you I tell you that LMAOOO. you're the coolest person and so much fun and ofc crazy smart but also a DANCE LEGEND like okay jay park okay renegade!! can't wait for more shenanigans next yr :))) anyways have the best bday my love!!!",
         options: ["Wes","John Harvard","Claire Zhou","Kathryn Zhou"],
         answer: 'Kathryn Zhou'
+    },
+    {
+        id: 45,
+        question: "Happy birthday Kat!! Hope you have a great year and thank you so much for taking me around Harvard! Hope to see you at a math club reunion, otherwise at HMMT :)",
+        options: ["Sidra Xu","Jeffrey Kwan","Claire Zhou","David Ma"],
+        answer: 'Sidra Xu'
+    },
+    {
+        id: 46,
+        question: "Hahn is life",
+        options: ["Jacqueline Wei","Hahn Lheem","Claire Zhou","Kathryn Zhou"],
+        answer: 'Hahn Lheem'
+    },
+    {
+        id: 47,
+        question: "Hi Kat HAPPIEST OF ALL BIRTHDAYS:’) I’m so grateful for our friendship & the memories we’ve made together. Currently missing our Cabot work sessions/walking together back to our dorms in the freezing wee hours of the night/talks about literally the most random things! Also you inspire me. Everyday. I so wish I could be with you to celebrate and I hope you have the most wonderful day!!! Sending love from the South❤️",
+        options: ["Jacqueline Wei","Hahn Lheem","Claire Zhou","Kathryn Zhou"],
+        answer: 'Claire Zhou'
     }
 ];

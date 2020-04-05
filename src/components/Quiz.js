@@ -103,13 +103,13 @@ state = {
                             <Typography variant="h4" align="center">
                                 Happy Birthday, Kat!!
                             </Typography>
-                            <Paper style={{ padding: 14, width: "90%", maxWidth: 640, margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "90%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
-                              In celebration of your special day, a group of 45+ people worked together to make this present happen:
-
-                              All of them wrote you a heartfelt birthday message. To continue to the next message, you must correctly guess the author from a list of options.
-
-                              When you're ready, the world is yours.
+                              In celebration of your special day, {QuizData.length} people worked together to make this happen:
+                                <br /><br />
+                              All of them wrote you heartfelt birthday messages. To continue, correctly guess the author of each.
+                              <br /><br />
+                              When you're ready, enjoy! PS: The site tracks the number of inccorect guesses ;)
 
                               </Typography>
                             </Paper>
@@ -129,11 +129,11 @@ state = {
                             <Typography variant="h4" align="center">
                                 The End!
                             </Typography>
-                            <Paper style={{ padding: 14, width: "90%", maxWidth: 640, margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "90%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
                                Incorrect Guesses: {this.state.score}
                                <br /><br />
-                              Contributors (in order of submission): Raymond Feng, Max Guo, Ivan Specht, Damon Halback, Matthew Hajjar, Nikhil Dharmaraj, Kelsey Wu, Shania Wang, Raj Movva, Sian Smith, Kevin Mao, Jocelin Su, Sheldon Tan, Ruhi Sayana, Joanna Lin, Derek Zheng, Anna Wang, Karen Ge, Moses Mayer, Ashley Lin, Cindy Wang, David Liu, Christie Chen, Jeffrey Kwan, Emiko Armstrong, Dylan Zhou, Asher Noel, Melinda Sun, Rachel Li, Ginnie Ma, Jacqueline Wei, Kelly Shen, Jeffrey Gu, Kat Zhang, David Ma, Justin Xie, Arul Kapoor, Lizzy Ling, Benji Kan, Ellen Dong, Melissa Kwan, Jimmy Lin, Haneul Shin, Jun Kim, Kathryn Zhou.
+                              Contributors (in order of submission): Raymond Feng, Max Guo, Ivan Specht, Damon Halback, Matthew Hajjar, Nikhil Dharmaraj, Kelsey Wu, Shania Wang, Raj Movva, Sian Smith, Kevin Mao, Jocelin Su, Sheldon Tan, Ruhi Sayana, Joanna Lin, Derek Zheng, Anna Wang, Karen Ge, Moses Mayer, Ashley Lin, Cindy Wang, David Liu, Christie Chen, Jeffrey Kwan, Emiko Armstrong, Dylan Zhou, Asher Noel, Melinda Sun, Rachel Li, Ginnie Ma, Jacqueline Wei, Kelly Shen, Jeffrey Gu, Kat Zhang, David Ma, Justin Xie, Arul Kapoor, Lizzy Ling, Benji Kan, Ellen Dong, Melissa Kwan, Jimmy Lin, Haneul Shin, Jun Kim, Kathryn Zhou, Sidra Xu, Hahn Lheem, Claire Zhou.
                               <br /><br />
                               Full List of Responses: <Link href ="https://docs.google.com/spreadsheets/d/1cnH9YdEm5oBJa8m-lM7ngTJSjiKNnx5lsM2vNYR1Bo8/edit?usp=sharing"> here </Link>
                               <br /><br />
@@ -157,7 +157,7 @@ state = {
                             <Typography variant="h4" align="center">
                               {`Message ${currentQuestion + 1}`}
                             </Typography>
-                            <Paper style={{ padding: 14, width: "90%", maxWidth: 640, margin: "12px auto" }}>
+                            <Paper style={{ padding: 14, width: "90%", maxWidth: 600, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
                                {questions}
                                <br /><br />
