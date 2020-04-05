@@ -26,7 +26,7 @@ export const QuizData = [
     {
         id: 4,
         question: " HAPPY BIRTHDAY KAT!!! I hope you had an amazing time at Harvard over this past year, and I can’t wait to see you once we get out of quarantine!! It’s always been so fun getting to hang out from lower school to high school of Harker, and I loved our time together in advisory! Wishing you all the best for your birthday and many more to come!!",
-        options: [" Anna Wang"," Kat's Harker Jun"," Matthew Hajjar"," Kat Zhang"],
+        options: [" Anna Wang"," Kat's Harker Jun","Matthew Hajjar"," Kat Zhang"],
         answer: 'Matthew Hajjar'
     },
     {
@@ -231,7 +231,7 @@ export const QuizData = [
         id: 38,
         question: "What does a birthday mean? Strictly speaking, it's simply the date that marks one's whole number of trips around the Sun, (almost) uniformly chosen among the 365 each year so that each person has a special day: their own. Socially speaking, society gradually confers legal benefits and removes protections as one progresses through the ranks of age. Practically speaking, it's a fun occasion to celebrate each person, an annual reminder of well-deserved appreciation.  // For you, it means all this (and more!), but... it's also pretty arbitrary, a mere consequence of how civilization has chosen to subdivide time over the years. Not everything has to have intrinsic meaning — you of all people know that best. It can just... be. And that, in and of itself, is meaningful, too. // Enjoy your special day Kat — you deserve only the best :) Happy birthday!",
         options: ["Benji Kan","Melissa Kwan","Ellen Dong","Jun Kim"],
-        answer: 'Benji Kam'
+        answer: 'Benji Kan'
     },
     {
         id: 39,
@@ -247,8 +247,8 @@ export const QuizData = [
     },
     {
         id: 41,
-        question: "Happy birthday Kat!!! I'm so lucky to have a friend as kind, thoughtful, and compassionate as you. Whether it's about boy problems or about how there aren't enough hard classes for you to take at Harvard or about faith, I'm always so excited whenever we get the chance to catch up and talk about life. You're a truly special person in the way you care about people and kill it at everything you do, and I can't wait for all the memories we'll continue to have together (I really hope you get quadded)! Have an amazing day! ",
-        options: ["Jimmy Lin","Jun Kim","Jun Kim","Kathryn Zhou"],
+        question: "Happy sbirthday Kat!!! I'm so lucky to have a friend as kind, thoughtful, and compassionate as you. Whether it's about boy problems or about how there aren't enough hard classes for you to take at Harvard or about faith, I'm always so excited whenever we get the chance to catch up and talk about life. You're a truly special person in the way you care about people and kill it at everything you do, and I can't wait for all the memories we'll continue to have together (I really hope you get quadded)! Have an amazing day! ",
+        options: ["Jimmy Lin","Patrick Star","Jun Kim","Kathryn Zhou"],
         answer: 'Jimmy Lin'
     },
     {

@@ -36,16 +36,10 @@ state = {
     }
 
     nextQuestionHandler = () => {
-      const {userAnswer, answer} = this.state;
       this.setState({
          currentQuestion: this.state.currentQuestion + 1
       })
-
-      if (userAnswer === answer) {
-        this.setState({
-            score: this.state.score + 1
-        })
-      }
+     
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -73,7 +67,8 @@ state = {
             })
         } else {
             this.setState({
-                disabled: true 
+                disabled: true, 
+                score: this.state.score + 1
             })
         }
 
@@ -112,12 +107,11 @@ state = {
                             </Typography>
                             <Paper style={{ padding: 14, width: 640, margin: "12px auto" }}>
                               <Typography variant="body1" gutterBottom>
-                              In celebration of your special day, a group of 45+ people worked together to make this present happen:
-                              
-                              All of them wrote you a heartfelt birthday message. To continue to the next message, you must correctly guess the author from a list of options. 
-                              
-                              When you're ready, the world is yours. 
-                            
+                              In celebration of your special day, ${QuizData.length} people worked together to make this present happen:
+                              <br /><br />
+                              All of them wrote you heartfelt birthday messages. To continue, you must correctly guess the author. 
+                              <br /><br />
+                              When you're ready, enjoy! PS: The site tracks incorrect guesses ;) 
                               </Typography>
                             </Paper>
                             <Button variant="contained" color="primary" onClick={this.startHandler}>
@@ -130,64 +124,71 @@ state = {
         
             if(quizEnd) {
                 return (
-                    <div>
-                        <h2>
-                            Messages Exhausted: You correctly guessed {this.state.score} authors
-                        </h2>
-
-                        <button 
-                            className = "ui inverted button"
-                            onClick={this.startOverHandler}
-                        >
-                            Start Over</button>
-
-                        <p> Contributors: </p> 
-
-                        <ul>
-                            {QuizData.map((item, index) => (
-                                <li className = "ui flaoting message options"  key = {index}>
-                                    {item.answer}
-                                </li>
-                            ))}
-                        </ul>
-
-                    </div>
+                    <Container>
+                        <Box m={3}>
+                            <Typography variant="h4" align="center">
+                                The End!
+                            </Typography>
+                            <Paper style={{ padding: 14, width: "80%", margin: "12px auto" }}>
+                              <Typography variant="body1" gutterBottom>
+                               Incorrect Guesses: {this.state.score} 
+                               <br /><br />
+                              Contributors (in order of submission): Raymond Feng, Max Guo, Ivan Specht, Damon Halback, Matthew Hajjar, Nikhil Dharmaraj, Kelsey Wu, Shania Wang, Raj Movva, Sian Smith, Kevin Mao, Jocelin Su, Sheldon Tan, Ruhi Sayana, Joanna Lin, Derek Zheng, Anna Wang, Karen Ge, Moses Mayer, Ashley Lin, Cindy Wang, David Liu, Christie Chen, Jeffrey Kwan, Emiko Armstrong, Dylan Zhou, Asher Noel, Melinda Sun, Rachel Li, Ginnie Ma, Jacqueline Wei, Kelly Shen, Jeffrey Gu, Kat Zhang, David Ma, Justin Xie, Arul Kapoor, Lizzy Ling, Benji Kan, Ellen Dong, Melissa Kwan, Jimmy Lin, Haneul Shin, Jun Kim, Kathryn Zhou.
+                              <br /><br />
+                              Full List of Responses: <Link href ="https://docs.google.com/spreadsheets/d/1cnH9YdEm5oBJa8m-lM7ngTJSjiKNnx5lsM2vNYR1Bo8/edit?usp=sharing"> here </Link>
+                              <br /><br />
+                              We are lucky to have you in our lives! HAPPY BIRTHDAY!!
+                              </Typography>
+                            </Paper>
+                            <Button variant="contained" color="primary" onClick={this.startOverHandler}>
+                                Start Over
+                            </Button>
+                        </Box>
+                    </Container>
+                   
                 )
             }
         
         
         
         return (
-            <div className='App'>
-                <h2>{questions}</h2>
-                <span> {`Message ${currentQuestion + 1} out of ${QuizData.length}`}</span>
-                {options.map(option => (
-                    <p key = {option.id} 
-                    onClick={() => this.checkAnswer(option)}
-                    className = {`ui floating message options
-                    ${userAnswer === option ? "selected" : null }`}
-                    >
-                        {option}
-                    
-                    </p>
-                ))}
-                {currentQuestion < QuizData.length - 1 && 
-                <button
-                  className = "ui inverted button"
-                  disabled = {this.state.disabled}
-                  onClick={this.nextQuestionHandler}
-                >
-                    Next
-                </button>}
-                {currentQuestion === QuizData.length - 1 && 
-                  <button 
-                    className = "ui inverted button"
-                    disabled = {this.state.disabled}
-                    onClick={this.finishHandler}
-                  >
-                      Finish</button>
-                }
-            </div>
+            <Container>
+                        <Box m={3}>
+                            <Typography variant="h4" align="center">
+                              {`Message ${currentQuestion + 1}`}
+                            </Typography>
+                            <Paper style={{ padding: 14, width: "80%", margin: "12px auto" }}>
+                              <Typography variant="body1" gutterBottom>
+                               {questions}
+                               <br /><br />
+                               {options.map(option => (
+                                <p key = {option.id} 
+                                onClick={() => this.checkAnswer(option)}
+                                    className = {`ui floating message options
+                                    ${userAnswer === option ? "selected" : null }`}
+                                >
+                                {option}
+                                </p>
+                                ))}
+                              </Typography>
+                            </Paper>
+                            {currentQuestion < QuizData.length - 1 && 
+                            <Button variant="contained" color="primary"
+                            disabled = {this.state.disabled}
+                            onClick={this.nextQuestionHandler}
+                            >
+                                Next
+                            </Button>}
+
+                            {currentQuestion === QuizData.length - 1 && 
+                            <Button variant="contained" color="primary"
+                                disabled = {this.state.disabled}
+                                onClick={this.finishHandler}
+                            >
+                                Finish</Button>
+                            }
+                        </Box>
+                    </Container>
         )
     }
 }
