@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap');
 
 .App {
   text-align: center;
@@ -48,6 +49,13 @@
 
 .btext{
   font: 18px/1.5  "Sen";
+}
+
+.qtext{
+  margin-top: 20px;
+  margin-bottom: -20px;
+  font: 12px/1.5 "Ruda";
+
 }
 
 .correct {
