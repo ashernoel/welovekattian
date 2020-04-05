@@ -55,11 +55,18 @@ state = {
       }
     }
 
-    checkAnswer = answer => {
+    checkAnswer = guess => {
+        const {userAnswer, answer} = this.state;
         this.setState({
-            userAnswer: answer,
-            disabled: false
+            userAnswer: guess,
+            disabled: false 
         })
+
+        if (userAnswer === answer) {
+            this.setState({
+                disabled: false 
+            })
+        }
     }
 
     finishHandler = () => {
@@ -72,12 +79,12 @@ state = {
 
     render() {
         const {questions, options, currentQuestion, userAnswer, quizEnd} = this.state;
-        
+        console.log("HELLO")
             if(quizEnd) {
                 return (
                     <div>
                         <h2>
-                            Messages Exhausted: You correctly guessed {this.state.score} auhtors
+                            Messages Exhausted: You correctly guessed {this.state.score} authors
                         </h2>
 
                         <p> Contributors: </p> 
