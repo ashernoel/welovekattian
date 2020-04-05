@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.selected {
+  background: linear-gradient(to right, #74ebd5, #acb6e5) !important;
+}
+
+.options {
+  padding: 8px;
+  border: 2px solid #000;
+  cursor: pointer; 
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-size: 18px;
+  background: #bdc3c7;
+}
