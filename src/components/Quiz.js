@@ -8,7 +8,8 @@ state = {
     options: [],
     quizEnd: false,
     score: 0,
-    disabled: true
+    disabled: true,
+    start: true
 }
 
     loadQuiz = () => {
@@ -22,8 +23,6 @@ state = {
         });
     };
 
-
-
     componentDidMount() {
         this.loadQuiz();
     }
@@ -31,7 +30,7 @@ state = {
     nextQuestionHandler = () => {
       const {userAnswer, answer, score} = this.state;
       this.setState({
-        currentQuestion: this.state.currentQuestion + 1
+         currentQuestion: this.state.currentQuestion + 1
       })
 
       if (userAnswer === answer) {
@@ -77,15 +76,60 @@ state = {
         }
     }
 
+    startHandler = () => {
+        this.setState({
+            start: false
+        })
+    }
+
+    startOverHandler = () => {
+        this.setState({
+            start: true
+        })
+    }
+
     render() {
-        const {questions, options, currentQuestion, userAnswer, quizEnd} = this.state;
+        const {questions, options, currentQuestion, userAnswer, quizEnd, start} = this.state;
         console.log("HELLO")
+            
+            if (start) {
+                return (
+                    <div> 
+                        <h2>
+                            Happy Birthday Kat!!!! 
+                        </h2>
+
+                        <h3>
+                            In celebration of your special day, a group of 45+ people worked together to make this present happen:  </h3>
+                            <h3>
+                            All of them wrote you a heartfelt birthday message. To continue to the next message, you must correctly guess the author from a list of options. 
+                            </h3>
+                            <h3>
+                            When you're ready, the world is yours. 
+                            </h3>
+                       
+
+                        <button 
+                    className = "ui inverted button"
+                    onClick={this.startHandler}
+                    >
+                      Begin</button>
+                    </div>
+                )
+            }
+        
             if(quizEnd) {
                 return (
                     <div>
                         <h2>
                             Messages Exhausted: You correctly guessed {this.state.score} authors
                         </h2>
+
+                        <button 
+                            className = "ui inverted button"
+                            onClick={this.startOverHandler}
+                        >
+                            Start Over</button>
 
                         <p> Contributors: </p> 
 

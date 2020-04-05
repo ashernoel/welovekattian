@@ -2,7 +2,7 @@ export const QuizData = [
     {
         id: 0,
         question: "hello hello :> thank you for putting up with me when I do stupid shit in Cabot and when I exquisitely roast you! you are so big brain but more importantly you are an incredibly sweet and caring person. and also you are big brain. and also your kat score is equal to 1. did I mention that you are big brain? happy birthday to our favorite sna- i mean CS guru! <3 -- stanvardexpedia",
-        options: ['Max Guo', "Raymond Feng", 'David Ma', 'Hahn Lheem'],
+        options: ['Kathryn Zhou', "Raymond Feng", 'David Ma', 'Hahn Lheem'],
         answer: "Raymond Feng"
     },
     {
